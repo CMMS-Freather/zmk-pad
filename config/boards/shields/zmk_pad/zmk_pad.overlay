@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include <dt-bindings/zmk/matrix_transform.h>
 #include "zmk_pad.dtsi"
 #include <dt-bindings/led/led.h>
 
@@ -12,6 +11,7 @@
     chosen {
         zmk,kscan = &kscan0;
         zmk,battery = &vbatt;
+        zmk,physical_layouts = &physical_layout0;
     };
 
     kscan0: kscan {
@@ -34,7 +34,6 @@
     }
 
     default_transform: keymap_transform_0 {
-        compatible = "zmk,matrix-transform";
         columns = <2>;
         rows = <2>;
         map = <
